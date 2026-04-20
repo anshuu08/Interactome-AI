@@ -1,0 +1,594 @@
+{
+  "drugs": {
+    "aspirin": {
+      "cid": 2244,
+      "name": "Aspirin",
+      "smiles": "CC(=O)OC1=CC=CC=C1C(O)=O",
+      "formula": "C9H8O4",
+      "molecular_weight": 180.16,
+      "class": "NSAID / Antiplatelet",
+      "cyp_enzymes": ["CYP2C9"],
+      "description": "Nonsteroidal anti-inflammatory drug and antiplatelet agent used for pain, fever, and cardiovascular protection."
+    },
+    "ibuprofen": {
+      "cid": 3672,
+      "name": "Ibuprofen",
+      "smiles": "CC(C)CC1=CC=C(C=C1)C(C)C(O)=O",
+      "formula": "C13H18O2",
+      "molecular_weight": 206.28,
+      "class": "NSAID",
+      "cyp_enzymes": ["CYP2C9", "CYP2C8"],
+      "description": "Nonsteroidal anti-inflammatory drug used for pain relief, fever reduction, and inflammation."
+    },
+    "warfarin": {
+      "cid": 54678486,
+      "name": "Warfarin",
+      "smiles": "CC(=O)CC(C1=CC=CC=C1)C2=C(O)C3=CC=CC=C3OC2=O",
+      "formula": "C19H16O4",
+      "molecular_weight": 308.33,
+      "class": "Anticoagulant",
+      "cyp_enzymes": ["CYP2C9", "CYP3A4", "CYP1A2"],
+      "description": "Anticoagulant that inhibits vitamin K-dependent clotting factors. Narrow therapeutic index."
+    },
+    "metformin": {
+      "cid": 4091,
+      "name": "Metformin",
+      "smiles": "CN(C)C(=N)NC(=N)N",
+      "formula": "C4H11N5",
+      "molecular_weight": 129.16,
+      "class": "Antidiabetic (Biguanide)",
+      "cyp_enzymes": [],
+      "description": "First-line medication for type 2 diabetes. Decreases hepatic glucose production."
+    },
+    "lisinopril": {
+      "cid": 5362119,
+      "name": "Lisinopril",
+      "smiles": "NCCCC[C@@H](N[C@@H](CCC(O)=O)C(=O)N1CCC[C@H]1C(O)=O)C(O)=O",
+      "formula": "C21H31N3O5",
+      "molecular_weight": 405.49,
+      "class": "ACE Inhibitor",
+      "cyp_enzymes": [],
+      "description": "ACE inhibitor used for hypertension, heart failure, and post-myocardial infarction."
+    },
+    "atorvastatin": {
+      "cid": 60823,
+      "name": "Atorvastatin",
+      "smiles": "CC(C)C1=C(C(=O)NC2=CC=CC=C2)C(=C(N1CCC(CC(CC(O)=O)O)O)C3=CC=C(F)C=C3)C4=CC=CC=C4",
+      "formula": "C33H35FN2O5",
+      "molecular_weight": 558.64,
+      "class": "Statin",
+      "cyp_enzymes": ["CYP3A4"],
+      "description": "HMG-CoA reductase inhibitor used to lower cholesterol and reduce cardiovascular risk."
+    },
+    "omeprazole": {
+      "cid": 4594,
+      "name": "Omeprazole",
+      "smiles": "CC1=CN=C(C(=C1OC)C)CS(=O)C2=NC3=CC=CC=C3N2",
+      "formula": "C17H19N3O3S",
+      "molecular_weight": 345.42,
+      "class": "Proton Pump Inhibitor",
+      "cyp_enzymes": ["CYP2C19", "CYP3A4"],
+      "description": "Proton pump inhibitor that reduces stomach acid. Used for GERD, ulcers, and acid-related conditions."
+    },
+    "amlodipine": {
+      "cid": 2162,
+      "name": "Amlodipine",
+      "smiles": "CCOC(=O)C1=C(COCCN)NC(=C(C1C2=CC=CC=C2Cl)C(=O)OC)C",
+      "formula": "C20H25ClN2O5",
+      "molecular_weight": 408.88,
+      "class": "Calcium Channel Blocker",
+      "cyp_enzymes": ["CYP3A4"],
+      "description": "Calcium channel blocker used for hypertension and angina."
+    },
+    "metoprolol": {
+      "cid": 4171,
+      "name": "Metoprolol",
+      "smiles": "COC1=CC=C(OCC(O)CNC(C)C)C=C1",
+      "formula": "C15H25NO3",
+      "molecular_weight": 267.36,
+      "class": "Beta Blocker",
+      "cyp_enzymes": ["CYP2D6"],
+      "description": "Selective beta-1 adrenergic blocker used for hypertension, angina, and heart failure."
+    },
+    "simvastatin": {
+      "cid": 54454,
+      "name": "Simvastatin",
+      "smiles": "CCC(C)(C)C(=O)OC1CC(O)C=C2C=CC(C)C(CCC3CC(O)CC(=O)O3)C12",
+      "formula": "C25H38O5",
+      "molecular_weight": 418.57,
+      "class": "Statin",
+      "cyp_enzymes": ["CYP3A4"],
+      "description": "HMG-CoA reductase inhibitor used to lower cholesterol. Metabolized extensively by CYP3A4."
+    },
+    "clopidogrel": {
+      "cid": 60606,
+      "name": "Clopidogrel",
+      "smiles": "COC(=O)C(C1=CC=CC=C1Cl)N2CCC3=CC=CS3CC2",
+      "formula": "C16H16ClNO2S",
+      "molecular_weight": 321.82,
+      "class": "Antiplatelet",
+      "cyp_enzymes": ["CYP2C19", "CYP3A4", "CYP2B6"],
+      "description": "Antiplatelet agent that inhibits ADP-induced platelet aggregation."
+    },
+    "fluconazole": {
+      "cid": 3365,
+      "name": "Fluconazole",
+      "smiles": "OC(CN1C=NC=N1)(CN2C=NC=N2)C3=CC=C(F)C=C3F",
+      "formula": "C13H12F2N6O",
+      "molecular_weight": 306.27,
+      "class": "Antifungal (Azole)",
+      "cyp_enzymes": ["CYP2C9", "CYP2C19", "CYP3A4"],
+      "description": "Triazole antifungal that is a potent inhibitor of CYP2C9 and CYP3A4 enzymes."
+    },
+    "ciprofloxacin": {
+      "cid": 2764,
+      "name": "Ciprofloxacin",
+      "smiles": "OC(=O)C1=CN(C2CC2)C3=CC(N4CCNCC4)=C(F)C=C3C1=O",
+      "formula": "C17H18FN3O3",
+      "molecular_weight": 331.34,
+      "class": "Fluoroquinolone Antibiotic",
+      "cyp_enzymes": ["CYP1A2"],
+      "description": "Broad-spectrum antibiotic. Potent inhibitor of CYP1A2."
+    },
+    "acetaminophen": {
+      "cid": 1983,
+      "name": "Acetaminophen",
+      "smiles": "CC(=O)NC1=CC=C(O)C=C1",
+      "formula": "C8H9NO2",
+      "molecular_weight": 151.16,
+      "class": "Analgesic / Antipyretic",
+      "cyp_enzymes": ["CYP2E1", "CYP1A2", "CYP3A4"],
+      "description": "Common analgesic and antipyretic. Hepatotoxic metabolite NAPQI formed via CYP2E1."
+    },
+    "losartan": {
+      "cid": 3961,
+      "name": "Losartan",
+      "smiles": "CCCCC1=NC(Cl)=C(N1CC2=CC=C(C=C2)C3=CC=CC=C3C4=NNN=N4)CO",
+      "formula": "C22H23ClN6O",
+      "molecular_weight": 422.91,
+      "class": "ARB (Angiotensin II Receptor Blocker)",
+      "cyp_enzymes": ["CYP2C9", "CYP3A4"],
+      "description": "Angiotensin II receptor blocker used for hypertension and diabetic nephropathy."
+    },
+    "hydrochlorothiazide": {
+      "cid": 3639,
+      "name": "Hydrochlorothiazide",
+      "smiles": "NS(=O)(=O)C1=CC2=C(NCNS2(=O)=O)C=C1Cl",
+      "formula": "C7H8ClN3O4S2",
+      "molecular_weight": 297.74,
+      "class": "Thiazide Diuretic",
+      "cyp_enzymes": [],
+      "description": "Thiazide diuretic used for hypertension and edema. Increases lithium and potassium loss."
+    },
+    "gabapentin": {
+      "cid": 3446,
+      "name": "Gabapentin",
+      "smiles": "NCC1(CC(O)=O)CCCCC1",
+      "formula": "C9H17NO2",
+      "molecular_weight": 171.24,
+      "class": "Anticonvulsant / Neuropathic Pain",
+      "cyp_enzymes": [],
+      "description": "Used for neuropathic pain and seizures. Not metabolized by CYP enzymes. Renally excreted."
+    },
+    "prednisone": {
+      "cid": 5865,
+      "name": "Prednisone",
+      "smiles": "OC(=O)COC1(O)CCC2C3CCC4=CC(=O)C=CC4(C)C3C(=O)CC12C",
+      "formula": "C21H26O5",
+      "molecular_weight": 358.43,
+      "class": "Corticosteroid",
+      "cyp_enzymes": ["CYP3A4"],
+      "description": "Synthetic corticosteroid used for inflammation and immune suppression. Metabolized by CYP3A4."
+    },
+    "diclofenac": {
+      "cid": 3033,
+      "name": "Diclofenac",
+      "smiles": "OC(=O)CC1=CC=CC=C1NC2=C(Cl)C=CC=C2Cl",
+      "formula": "C14H11Cl2NO2",
+      "molecular_weight": 296.15,
+      "class": "NSAID",
+      "cyp_enzymes": ["CYP2C9"],
+      "description": "Nonsteroidal anti-inflammatory drug. Metabolized primarily by CYP2C9."
+    },
+    "pantoprazole": {
+      "cid": 4679,
+      "name": "Pantoprazole",
+      "smiles": "COC1=CC=NC(CS(=O)C2=NC3=C(OC(F)(F)OC3=C2)N2)=C1OC",
+      "formula": "C16H15F2N3O4S",
+      "molecular_weight": 383.37,
+      "class": "Proton Pump Inhibitor",
+      "cyp_enzymes": ["CYP2C19"],
+      "description": "Proton pump inhibitor with less CYP interaction potential than omeprazole."
+    }
+  },
+  "cyp_enzymes": {
+    "CYP3A4": {
+      "name": "CYP3A4",
+      "description": "The most abundant CYP enzyme, metabolizes ~50% of all drugs. Located primarily in liver and intestine.",
+      "substrates": ["atorvastatin", "simvastatin", "amlodipine", "omeprazole", "prednisone", "warfarin"],
+      "inhibitors": ["fluconazole", "ciprofloxacin", "omeprazole", "clopidogrel"],
+      "risk_note": "When multiple CYP3A4 substrates are combined with an inhibitor, drug levels can rise dangerously."
+    },
+    "CYP2C9": {
+      "name": "CYP2C9",
+      "description": "Metabolizes ~15% of drugs including NSAIDs and warfarin. Genetic polymorphisms common.",
+      "substrates": ["warfarin", "losartan", "diclofenac", "ibuprofen", "aspirin"],
+      "inhibitors": ["fluconazole", "omeprazole"],
+      "risk_note": "CYP2C9 inhibition can cause warfarin toxicity leading to severe bleeding."
+    },
+    "CYP2C19": {
+      "name": "CYP2C19",
+      "description": "Metabolizes PPIs and clopidogrel. Highly polymorphic — poor metabolizers at elevated risk.",
+      "substrates": ["omeprazole", "pantoprazole", "clopidogrel"],
+      "inhibitors": ["fluconazole", "omeprazole"],
+      "risk_note": "Omeprazole inhibits CYP2C19, reducing clopidogrel activation and antiplatelet efficacy."
+    },
+    "CYP2D6": {
+      "name": "CYP2D6", 
+      "description": "Metabolizes ~25% of drugs including beta-blockers, antidepressants, and opioids.",
+      "substrates": ["metoprolol"],
+      "inhibitors": [],
+      "risk_note": "CYP2D6 poor metabolizers accumulate metoprolol, causing excessive beta-blockade."
+    },
+    "CYP1A2": {
+      "name": "CYP1A2",
+      "description": "Metabolizes caffeine, theophylline, and some drugs. Induced by smoking.",
+      "substrates": ["warfarin", "acetaminophen"],
+      "inhibitors": ["ciprofloxacin"],
+      "risk_note": "Ciprofloxacin inhibits CYP1A2, increasing warfarin and theophylline levels."
+    },
+    "CYP2E1": {
+      "name": "CYP2E1",
+      "description": "Metabolizes acetaminophen to toxic NAPQI. Induced by chronic alcohol use.",
+      "substrates": ["acetaminophen"],
+      "inhibitors": [],
+      "risk_note": "CYP2E1 induction (e.g., by alcohol) increases NAPQI production, raising hepatotoxicity risk."
+    }
+  },
+  "pairwise_interactions": {
+    "aspirin+warfarin": {
+      "risk": "HIGH",
+      "side_effects": ["Gastrointestinal bleeding", "Intracranial hemorrhage", "Bruising"],
+      "mechanism": "Both drugs inhibit hemostasis. Aspirin inhibits platelet aggregation via COX-1 while warfarin inhibits vitamin K-dependent clotting factors. Combined use synergistically increases bleeding risk.",
+      "cyp_overlap": ["CYP2C9"],
+      "affected_organs": ["cardiovascular", "gastrointestinal"],
+      "gap_hours": 12
+    },
+    "aspirin+ibuprofen": {
+      "risk": "HIGH",
+      "side_effects": ["GI ulceration", "GI bleeding", "Reduced cardioprotection"],
+      "mechanism": "Ibuprofen competitively inhibits COX-1 binding, blocking aspirin's irreversible antiplatelet effect. Concurrent NSAID use dramatically increases GI bleeding risk.",
+      "cyp_overlap": ["CYP2C9"],
+      "affected_organs": ["gastrointestinal", "cardiovascular"],
+      "gap_hours": 8
+    },
+    "aspirin+clopidogrel": {
+      "risk": "MEDIUM",
+      "side_effects": ["Increased bleeding", "Bruising"],
+      "mechanism": "Dual antiplatelet therapy — both inhibit platelet function through different mechanisms (COX-1 vs ADP receptor). Synergistic bleeding risk.",
+      "cyp_overlap": [],
+      "affected_organs": ["cardiovascular"],
+      "gap_hours": 0
+    },
+    "warfarin+ibuprofen": {
+      "risk": "HIGH",
+      "side_effects": ["Severe GI bleeding", "Elevated INR", "Hematuria"],
+      "mechanism": "Ibuprofen displaces warfarin from plasma protein binding and inhibits CYP2C9-mediated warfarin metabolism, increasing free warfarin concentration.",
+      "cyp_overlap": ["CYP2C9"],
+      "affected_organs": ["gastrointestinal", "kidney"],
+      "gap_hours": 24
+    },
+    "warfarin+fluconazole": {
+      "risk": "HIGH",
+      "side_effects": ["Elevated INR", "Severe bleeding", "Hemorrhage"],
+      "mechanism": "Fluconazole is a potent CYP2C9 inhibitor, dramatically reducing warfarin clearance. Can cause 2-3x increase in warfarin levels.",
+      "cyp_overlap": ["CYP2C9", "CYP3A4"],
+      "affected_organs": ["liver", "cardiovascular"],
+      "gap_hours": 48
+    },
+    "warfarin+omeprazole": {
+      "risk": "MEDIUM",
+      "side_effects": ["Mildly elevated INR", "Increased bleeding risk"],
+      "mechanism": "Omeprazole inhibits CYP2C19 and weakly inhibits CYP2C9, modestly reducing warfarin metabolism.",
+      "cyp_overlap": ["CYP2C9"],
+      "affected_organs": ["liver"],
+      "gap_hours": 4
+    },
+    "warfarin+acetaminophen": {
+      "risk": "MEDIUM",
+      "side_effects": ["Elevated INR", "Increased bleeding risk"],
+      "mechanism": "Acetaminophen's metabolite inhibits vitamin K cycle enzymes, potentiating warfarin's anticoagulant effect. Risk increases with doses >2g/day for >3 days.",
+      "cyp_overlap": ["CYP1A2"],
+      "affected_organs": ["liver", "cardiovascular"],
+      "gap_hours": 6
+    },
+    "warfarin+ciprofloxacin": {
+      "risk": "HIGH",
+      "side_effects": ["Elevated INR", "Bleeding", "Hemorrhage"],
+      "mechanism": "Ciprofloxacin inhibits CYP1A2-mediated warfarin metabolism and kills vitamin K-producing gut flora, amplifying anticoagulant effect.",
+      "cyp_overlap": ["CYP1A2"],
+      "affected_organs": ["liver", "gastrointestinal"],
+      "gap_hours": 12
+    },
+    "atorvastatin+fluconazole": {
+      "risk": "HIGH",
+      "side_effects": ["Rhabdomyolysis", "Myopathy", "Liver toxicity"],
+      "mechanism": "Fluconazole strongly inhibits CYP3A4 which metabolizes atorvastatin, causing statin accumulation and risk of severe muscle breakdown.",
+      "cyp_overlap": ["CYP3A4"],
+      "affected_organs": ["liver", "muscle"],
+      "gap_hours": 24
+    },
+    "simvastatin+amlodipine": {
+      "risk": "MEDIUM",
+      "side_effects": ["Myopathy", "Rhabdomyolysis"],
+      "mechanism": "Amlodipine inhibits CYP3A4-mediated simvastatin metabolism. FDA recommends limiting simvastatin to 20mg with amlodipine.",
+      "cyp_overlap": ["CYP3A4"],
+      "affected_organs": ["muscle", "liver"],
+      "gap_hours": 12
+    },
+    "simvastatin+fluconazole": {
+      "risk": "HIGH",
+      "side_effects": ["Severe rhabdomyolysis", "Acute kidney injury", "Liver failure"],
+      "mechanism": "Potent CYP3A4 inhibition by fluconazole causes massive simvastatin accumulation. Contraindicated combination.",
+      "cyp_overlap": ["CYP3A4"],
+      "affected_organs": ["muscle", "kidney", "liver"],
+      "gap_hours": 48
+    },
+    "omeprazole+clopidogrel": {
+      "risk": "HIGH",
+      "side_effects": ["Reduced antiplatelet effect", "Increased cardiovascular events"],
+      "mechanism": "Omeprazole inhibits CYP2C19, which is required to convert clopidogrel (prodrug) into its active metabolite. Reduces antiplatelet efficacy by 40-50%.",
+      "cyp_overlap": ["CYP2C19"],
+      "affected_organs": ["cardiovascular"],
+      "gap_hours": 12
+    },
+    "metformin+hydrochlorothiazide": {
+      "risk": "MEDIUM",
+      "side_effects": ["Hyperglycemia", "Lactic acidosis (rare)"],
+      "mechanism": "Thiazide diuretics can increase blood glucose, opposing metformin's glucose-lowering effect. Dehydration increases lactic acidosis risk.",
+      "cyp_overlap": [],
+      "affected_organs": ["kidney", "metabolic"],
+      "gap_hours": 4
+    },
+    "lisinopril+losartan": {
+      "risk": "HIGH",
+      "side_effects": ["Hyperkalemia", "Acute kidney injury", "Hypotension"],
+      "mechanism": "Dual RAAS blockade (ACE inhibitor + ARB) causes excessive suppression of aldosterone, leading to dangerous potassium elevation and renal failure.",
+      "cyp_overlap": [],
+      "affected_organs": ["kidney", "cardiovascular"],
+      "gap_hours": 24
+    },
+    "lisinopril+hydrochlorothiazide": {
+      "risk": "LOW",
+      "side_effects": ["Electrolyte imbalance", "Dizziness"],
+      "mechanism": "Common therapeutic combination. HCTZ offsets hyperkalemia from lisinopril. Monitor electrolytes.",
+      "cyp_overlap": [],
+      "affected_organs": ["kidney"],
+      "gap_hours": 0
+    },
+    "metoprolol+amlodipine": {
+      "risk": "MEDIUM",
+      "side_effects": ["Severe bradycardia", "Hypotension", "Heart block"],
+      "mechanism": "Both drugs reduce heart rate and blood pressure through different mechanisms. Additive cardiodepressant effect.",
+      "cyp_overlap": [],
+      "affected_organs": ["cardiovascular"],
+      "gap_hours": 6
+    },
+    "acetaminophen+warfarin": {
+      "risk": "MEDIUM",
+      "side_effects": ["Elevated INR", "Bleeding risk"],
+      "mechanism": "Acetaminophen metabolite NAPQI interferes with vitamin K cycle. Effect dose-dependent — significant above 2g/day.",
+      "cyp_overlap": ["CYP1A2"],
+      "affected_organs": ["liver", "cardiovascular"],
+      "gap_hours": 6
+    },
+    "prednisone+aspirin": {
+      "risk": "MEDIUM",
+      "side_effects": ["GI ulceration", "GI bleeding", "Impaired wound healing"],
+      "mechanism": "Corticosteroids reduce gastric mucosal protection while aspirin inhibits COX-mediated prostaglandin synthesis. Synergistic GI toxicity.",
+      "cyp_overlap": [],
+      "affected_organs": ["gastrointestinal"],
+      "gap_hours": 4
+    },
+    "prednisone+metformin": {
+      "risk": "MEDIUM",
+      "side_effects": ["Hyperglycemia", "Loss of glycemic control"],
+      "mechanism": "Corticosteroids increase hepatic gluconeogenesis and induce insulin resistance, directly opposing metformin's mechanism of action.",
+      "cyp_overlap": [],
+      "affected_organs": ["metabolic"],
+      "gap_hours": 4
+    },
+    "ciprofloxacin+acetaminophen": {
+      "risk": "LOW",
+      "side_effects": ["Mildly increased acetaminophen levels"],
+      "mechanism": "Ciprofloxacin inhibits CYP1A2, slightly reducing acetaminophen metabolism. Clinically significant only at high acetaminophen doses.",
+      "cyp_overlap": ["CYP1A2"],
+      "affected_organs": ["liver"],
+      "gap_hours": 2
+    },
+    "diclofenac+warfarin": {
+      "risk": "HIGH",
+      "side_effects": ["GI bleeding", "Elevated INR", "Hemorrhage"],
+      "mechanism": "Diclofenac is metabolized by CYP2C9 like warfarin. Competitive inhibition increases warfarin levels. NSAID GI toxicity compounds bleeding risk.",
+      "cyp_overlap": ["CYP2C9"],
+      "affected_organs": ["gastrointestinal", "liver"],
+      "gap_hours": 24
+    },
+    "diclofenac+lisinopril": {
+      "risk": "MEDIUM",
+      "side_effects": ["Reduced antihypertensive effect", "Acute kidney injury"],
+      "mechanism": "NSAIDs inhibit prostaglandin-mediated renal blood flow regulation, reducing ACE inhibitor efficacy and increasing nephrotoxicity risk.",
+      "cyp_overlap": [],
+      "affected_organs": ["kidney", "cardiovascular"],
+      "gap_hours": 8
+    },
+    "gabapentin+metoprolol": {
+      "risk": "LOW",
+      "side_effects": ["Dizziness", "Fatigue"],
+      "mechanism": "Additive CNS depression. Both can cause dizziness. No significant pharmacokinetic interaction.",
+      "cyp_overlap": [],
+      "affected_organs": ["neurological"],
+      "gap_hours": 0
+    },
+    "atorvastatin+omeprazole": {
+      "risk": "LOW",
+      "side_effects": ["Mildly increased statin levels"],
+      "mechanism": "Omeprazole is a weak CYP3A4 inhibitor. May modestly increase atorvastatin exposure. Usually clinically insignificant.",
+      "cyp_overlap": ["CYP3A4"],
+      "affected_organs": ["liver"],
+      "gap_hours": 2
+    },
+    "atorvastatin+amlodipine": {
+      "risk": "LOW",
+      "side_effects": ["Mildly increased statin levels"],
+      "mechanism": "Amlodipine weakly inhibits CYP3A4. FDA allows full-dose atorvastatin with amlodipine, unlike simvastatin.",
+      "cyp_overlap": ["CYP3A4"],
+      "affected_organs": ["liver"],
+      "gap_hours": 0
+    },
+    "metformin+lisinopril": {
+      "risk": "LOW",
+      "side_effects": ["Hypoglycemia (rare)", "Dizziness"],
+      "mechanism": "ACE inhibitors may enhance insulin sensitivity, slightly potentiating metformin. Generally safe therapeutic combination.",
+      "cyp_overlap": [],
+      "affected_organs": ["metabolic"],
+      "gap_hours": 0
+    }
+  },
+  "higher_order_interactions": {
+    "aspirin+warfarin+ibuprofen": {
+      "risk": "HIGH",
+      "side_effects": ["Life-threatening GI hemorrhage", "Intracranial bleeding", "Severe anemia"],
+      "mechanism": "Triple threat: aspirin + ibuprofen provide dual COX inhibition destroying GI mucosal protection, while warfarin prevents clot formation. All three compete for CYP2C9 metabolism. This combination has caused documented fatalities.",
+      "affected_organs": ["gastrointestinal", "cardiovascular", "neurological"],
+      "confidence": 0.95
+    },
+    "warfarin+fluconazole+aspirin": {
+      "risk": "HIGH",
+      "side_effects": ["Catastrophic bleeding", "Hemorrhagic stroke", "Organ hemorrhage"],
+      "mechanism": "Fluconazole potently inhibits CYP2C9, causing 2-3x warfarin accumulation. Aspirin adds antiplatelet effect. This triple combination creates extreme, uncontrollable bleeding risk.",
+      "affected_organs": ["cardiovascular", "liver", "neurological"],
+      "confidence": 0.97
+    },
+    "simvastatin+amlodipine+fluconazole": {
+      "risk": "HIGH",
+      "side_effects": ["Severe rhabdomyolysis", "Acute renal failure", "Hepatotoxicity"],
+      "mechanism": "Both amlodipine and fluconazole inhibit CYP3A4 which metabolizes simvastatin. Dual CYP3A4 inhibition causes massive statin accumulation, leading to muscle breakdown and kidney damage from myoglobin.",
+      "affected_organs": ["muscle", "kidney", "liver"],
+      "confidence": 0.93
+    },
+    "omeprazole+clopidogrel+aspirin": {
+      "risk": "HIGH",
+      "side_effects": ["Cardiovascular events", "Stent thrombosis", "Stroke"],
+      "mechanism": "Omeprazole inhibits CYP2C19-mediated clopidogrel activation. With reduced antithrombotic protection from both clopidogrel and aspirin's interaction, patients on dual antiplatelet therapy face increased risk of cardiovascular events.",
+      "affected_organs": ["cardiovascular"],
+      "confidence": 0.88
+    },
+    "lisinopril+losartan+hydrochlorothiazide": {
+      "risk": "HIGH",
+      "side_effects": ["Severe hyperkalemia", "Cardiac arrest", "Acute kidney failure"],
+      "mechanism": "Dual RAAS blockade (ACE inhibitor + ARB) with a diuretic causes unpredictable electrolyte shifts. Severe hyperkalemia can cause fatal cardiac arrhythmias.",
+      "affected_organs": ["kidney", "cardiovascular"],
+      "confidence": 0.90
+    },
+    "prednisone+aspirin+ibuprofen": {
+      "risk": "HIGH",
+      "side_effects": ["Severe GI ulceration", "GI perforation", "GI hemorrhage"],
+      "mechanism": "Triple assault on GI mucosa: prednisone reduces mucosal defense, aspirin and ibuprofen both inhibit protective prostaglandin synthesis. Risk of GI perforation significantly elevated.",
+      "affected_organs": ["gastrointestinal"],
+      "confidence": 0.92
+    },
+    "metformin+prednisone+hydrochlorothiazide": {
+      "risk": "MEDIUM",
+      "side_effects": ["Severe hyperglycemia", "Lactic acidosis", "Diabetic ketoacidosis"],
+      "mechanism": "Both prednisone (gluconeogenesis induction) and HCTZ (pancreatic beta-cell suppression) oppose metformin's glucose-lowering effect. Triple combination can cause loss of glycemic control.",
+      "affected_organs": ["metabolic", "kidney"],
+      "confidence": 0.85
+    },
+    "warfarin+ciprofloxacin+aspirin": {
+      "risk": "HIGH",
+      "side_effects": ["Severe bleeding", "GI hemorrhage", "Hematuria"],
+      "mechanism": "Ciprofloxacin inhibits CYP1A2-mediated warfarin metabolism AND kills vitamin K-producing gut bacteria. Combined with aspirin's antiplatelet effect, creates extreme bleeding risk.",
+      "affected_organs": ["gastrointestinal", "cardiovascular", "kidney"],
+      "confidence": 0.91
+    },
+    "atorvastatin+amlodipine+omeprazole": {
+      "risk": "MEDIUM",
+      "side_effects": ["Myopathy", "Elevated liver enzymes", "Muscle weakness"],
+      "mechanism": "Multiple weak CYP3A4 inhibitors (amlodipine + omeprazole) combined can have additive effect on atorvastatin metabolism, increasing statin exposure beyond what either alone would cause.",
+      "affected_organs": ["liver", "muscle"],
+      "confidence": 0.75
+    },
+    "metoprolol+amlodipine+lisinopril": {
+      "risk": "MEDIUM",
+      "side_effects": ["Severe hypotension", "Syncope", "Bradycardia"],
+      "mechanism": "Triple antihypertensive therapy: beta-blocker + calcium channel blocker + ACE inhibitor. Additive hypotensive effect can cause dangerous blood pressure drops, especially in elderly patients.",
+      "affected_organs": ["cardiovascular"],
+      "confidence": 0.80
+    },
+    "diclofenac+lisinopril+metformin": {
+      "risk": "MEDIUM",
+      "side_effects": ["Acute kidney injury", "Hyperkalemia", "Hypoglycemia"],
+      "mechanism": "NSAID reduces renal blood flow, impairing lisinopril efficacy and metformin clearance. Renally impaired metformin elimination increases lactic acidosis risk.",
+      "affected_organs": ["kidney", "metabolic"],
+      "confidence": 0.82
+    },
+    "acetaminophen+warfarin+ciprofloxacin": {
+      "risk": "HIGH",
+      "side_effects": ["Elevated INR", "Bleeding", "Hepatotoxicity"],
+      "mechanism": "Ciprofloxacin inhibits CYP1A2 (warfarin metabolism), acetaminophen interferes with vitamin K cycle, and all three drugs undergo hepatic processing. Triple hepatic stress with anticoagulation amplification.",
+      "affected_organs": ["liver", "cardiovascular"],
+      "confidence": 0.88
+    }
+  },
+  "timing_recommendations": {
+    "aspirin": { "suggested_time": "Morning with food", "notes": "Take with food to reduce GI irritation. If on anticoagulants, maximum 8-hour gap." },
+    "ibuprofen": { "suggested_time": "With food, spaced from aspirin", "notes": "Take at least 8 hours apart from aspirin. 30 min before or 8 hours after." },
+    "warfarin": { "suggested_time": "Evening, consistent time daily", "notes": "Take at same time every day. Avoid major dietary vitamin K changes." },
+    "metformin": { "suggested_time": "With meals (morning and evening)", "notes": "Take with food to reduce GI side effects. Extended-release: once daily with evening meal." },
+    "lisinopril": { "suggested_time": "Morning", "notes": "Once daily, consistent time. May cause dizziness initially." },
+    "atorvastatin": { "suggested_time": "Evening/bedtime", "notes": "Cholesterol synthesis peaks at night. Does not need to be taken with food." },
+    "omeprazole": { "suggested_time": "30 minutes before breakfast", "notes": "Most effective when taken before first meal. Take 12+ hours before clopidogrel if both needed." },
+    "amlodipine": { "suggested_time": "Morning or evening, consistent", "notes": "Long half-life allows flexible dosing. Avoid grapefruit (CYP3A4)." },
+    "metoprolol": { "suggested_time": "Morning and evening with food", "notes": "Take with food to increase absorption. Never stop abruptly — taper over 1-2 weeks." },
+    "simvastatin": { "suggested_time": "Evening/bedtime", "notes": "Must be taken in evening for optimal effect. Avoid grapefruit juice." },
+    "clopidogrel": { "suggested_time": "Morning", "notes": "Take 12+ hours apart from omeprazole if needed. Pantoprazole preferred over omeprazole." },
+    "fluconazole": { "suggested_time": "Morning", "notes": "Space from statins by 12+ hours. Monitor liver function." },
+    "ciprofloxacin": { "suggested_time": "Morning and evening, 12 hours apart", "notes": "Avoid antacids, dairy, and supplements within 2 hours. Hydrate well." },
+    "acetaminophen": { "suggested_time": "As needed, max 3g/day", "notes": "Limit to 2g/day if taking warfarin. Space doses 4-6 hours apart." },
+    "losartan": { "suggested_time": "Morning", "notes": "Once or twice daily. Do not combine with ACE inhibitors." },
+    "hydrochlorothiazide": { "suggested_time": "Morning", "notes": "Take in morning to avoid nocturia. Monitor potassium levels." },
+    "gabapentin": { "suggested_time": "Three times daily, evenly spaced", "notes": "Space doses evenly (approx 8 hours). Can be taken with or without food." },
+    "prednisone": { "suggested_time": "Morning with food", "notes": "Take with food to reduce GI effects. Morning dosing mimics natural cortisol rhythm." },
+    "diclofenac": { "suggested_time": "With food, 2-3 times daily", "notes": "Take with food. Avoid concurrent aspirin or other NSAIDs." },
+    "pantoprazole": { "suggested_time": "30 minutes before breakfast", "notes": "Preferred PPI with clopidogrel (less CYP2C19 interaction than omeprazole)." }
+  },
+  "side_effect_catalog": {
+    "Gastrointestinal bleeding": { "organ": "gastrointestinal", "severity": "HIGH", "description": "Bleeding in the stomach or intestines, can be life-threatening" },
+    "GI ulceration": { "organ": "gastrointestinal", "severity": "HIGH", "description": "Open sores in the stomach or duodenal lining" },
+    "GI perforation": { "organ": "gastrointestinal", "severity": "HIGH", "description": "Hole in the wall of the GI tract — surgical emergency" },
+    "Liver toxicity": { "organ": "liver", "severity": "HIGH", "description": "Drug-induced liver injury from hepatotoxic metabolites" },
+    "Hepatotoxicity": { "organ": "liver", "severity": "HIGH", "description": "Liver damage from drug metabolism overload" },
+    "Elevated liver enzymes": { "organ": "liver", "severity": "MEDIUM", "description": "AST/ALT elevation indicating liver stress" },
+    "Rhabdomyolysis": { "organ": "muscle", "severity": "HIGH", "description": "Breakdown of muscle tissue releasing myoglobin, can cause kidney failure" },
+    "Myopathy": { "organ": "muscle", "severity": "MEDIUM", "description": "Muscle pain, weakness, or tenderness" },
+    "Acute kidney injury": { "organ": "kidney", "severity": "HIGH", "description": "Sudden loss of kidney function" },
+    "Hyperkalemia": { "organ": "kidney", "severity": "HIGH", "description": "Dangerously high potassium — can cause cardiac arrest" },
+    "Hematuria": { "organ": "kidney", "severity": "MEDIUM", "description": "Blood in urine" },
+    "Elevated INR": { "organ": "cardiovascular", "severity": "MEDIUM", "description": "International Normalized Ratio above therapeutic range" },
+    "Severe bleeding": { "organ": "cardiovascular", "severity": "HIGH", "description": "Uncontrolled bleeding requiring medical intervention" },
+    "Hemorrhage": { "organ": "cardiovascular", "severity": "HIGH", "description": "Massive blood loss from internal or external source" },
+    "Intracranial hemorrhage": { "organ": "neurological", "severity": "HIGH", "description": "Bleeding inside the skull — life-threatening emergency" },
+    "Bruising": { "organ": "skin", "severity": "LOW", "description": "Easy bruising from impaired coagulation" },
+    "Skin rash": { "organ": "skin", "severity": "LOW", "description": "Allergic or drug-induced skin reaction" },
+    "Severe hypotension": { "organ": "cardiovascular", "severity": "HIGH", "description": "Dangerously low blood pressure" },
+    "Bradycardia": { "organ": "cardiovascular", "severity": "MEDIUM", "description": "Abnormally slow heart rate" },
+    "Syncope": { "organ": "cardiovascular", "severity": "MEDIUM", "description": "Fainting due to reduced brain perfusion" },
+    "Hyperglycemia": { "organ": "metabolic", "severity": "MEDIUM", "description": "Elevated blood sugar levels" },
+    "Lactic acidosis": { "organ": "metabolic", "severity": "HIGH", "description": "Dangerous buildup of lactic acid — medical emergency" },
+    "Reduced antiplatelet effect": { "organ": "cardiovascular", "severity": "HIGH", "description": "Loss of blood-thinning protection" },
+    "Dizziness": { "organ": "neurological", "severity": "LOW", "description": "Lightheadedness or vertigo" },
+    "Fatigue": { "organ": "neurological", "severity": "LOW", "description": "Excessive tiredness" },
+    "Hypoglycemia": { "organ": "metabolic", "severity": "MEDIUM", "description": "Dangerously low blood sugar" }
+  }
+}

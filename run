@@ -1,0 +1,19 @@
+cd "c:\Users\HP\.gemini\antigravity\scratch\interactome-ai"
+docker-compose up --build
+
+
+Option B — Manual (no Docker)
+
+Terminal 1 — FastAPI Backend:
+
+powershell
+cd "c:\Users\HP\.gemini\antigravity\scratch\interactome-ai\backend"
+pip install -r requirements.txt    # first time only
+uvicorn app.main:app --reload --port 800
+
+erminal 2 — Next.js Frontend:
+
+powershell
+cd "c:\Users\HP\.gemini\antigravity\scratch\interactome-ai\frontend"
+npm install        # first time only
+npm run dev
