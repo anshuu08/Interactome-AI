@@ -321,7 +321,7 @@ export default function PredictorPage() {
             </CardContent>
           </Card>
 
-          {/* Patient Profile (Optional) */}
+          {/* Patient Profile (Optional)
           <Card>
             <CardHeader className="pb-3">
               <button
@@ -396,7 +396,7 @@ export default function PredictorPage() {
                 </div>
               </CardContent>
             )}
-          </Card>
+          </Card> */}
 
           {/* Analyze Button */}
           <Button
