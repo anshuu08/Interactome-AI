@@ -1,0 +1,39 @@
+databases:
+  - name: interactome-ai-db
+    databaseName: interactome_db
+    user: interactome
+    plan: free
+    region: oregon
+
+services:
+  # ── Backend (FastAPI) ──────────────────────────────────
+  - type: web
+    name: interactome-ai-backend
+    runtime: docker
+    region: oregon
+    plan: free
+    rootDir: backend
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: PYTHONUNBUFFERED
+        value: "1"
+      - key: DATABASE_URL
+        fromDatabase:
+          name: interactome-ai-db
+          property: connectionString
+    healthCheckPath: /health
+
+  # ── Frontend (Next.js) ────────────────────────────────
+  - type: web
+    name: interactome-ai-frontend
+    runtime: docker
+    region: oregon
+    plan: free
+    rootDir: frontend
+    dockerfilePath: ./Dockerfile
+    envVars:
+      - key: NEXT_PUBLIC_API_URL
+        fromService:
+          name: interactome-ai-backend
+          type: web
+          property: host
