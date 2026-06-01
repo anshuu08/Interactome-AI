@@ -15,7 +15,9 @@ services:
       interval: 30s
       timeout: 5s
       retries: 3
-    restart: unless-stopped
+    depends_on:
+      db:
+        condition: service_healthy
 
   # ── Frontend (Next.js) ─────────────────────────────────
   frontend:
@@ -29,4 +31,28 @@ services:
     depends_on:
       backend:
         condition: service_healthy
-    restart: unless-stopped
+    environment:
+      - POSTGRES_USER=interactome
+      - POSTGRES_PASSWORD=securepassword
+      - POSTGRES_DB=interactome_db
+      - POSTGRES_HOST=db
+      - POSTGRES_PORT=5432
+  # ── Database (PostgreSQL) ───────────────────────
+  db:
+    image: postgres:16-alpine
+    environment:
+      - POSTGRES_USER=interactome
+      - POSTGRES_PASSWORD=securepassword
+      - POSTGRES_DB=interactome_db
+    ports:
+      - "5432:5432"
+    healthcheck:
+      test: ["CMD", "pg_isready", "-U", "interactome"]
+      interval: 30s
+      timeout: 5s
+      retries: 5
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
+volumes:
+  db_data:

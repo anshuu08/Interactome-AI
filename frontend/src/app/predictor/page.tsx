@@ -321,12 +321,13 @@ export default function PredictorPage() {
             </CardContent>
           </Card>
 
-          {/* Patient Profile (Optional)
+          {/* Patient Profile (Optional) */}
           <Card>
             <CardHeader className="pb-3">
               <button
                 className="flex items-center justify-between w-full"
                 onClick={() => setShowProfile(!showProfile)}
+                type="button"
               >
                 <CardTitle className="text-base flex items-center gap-2">
                   <User className="w-4 h-4 text-teal-600" />
@@ -379,7 +380,7 @@ export default function PredictorPage() {
                       onChange={(e) => setConditionInput(e.target.value)}
                       onKeyDown={(e) => e.key === "Enter" && addCondition()}
                     />
-                    <Button size="sm" variant="outline" onClick={addCondition}>
+                    <Button size="sm" variant="outline" type="button" onClick={addCondition}>
                       Add
                     </Button>
                   </div>
@@ -388,7 +389,7 @@ export default function PredictorPage() {
                       {conditions.map((c) => (
                         <span key={c} className="drug-chip text-xs">
                           {c}
-                          <button onClick={() => setConditions(conditions.filter((x) => x !== c))}>×</button>
+                          <button type="button" onClick={() => setConditions(conditions.filter((x) => x !== c))}>×</button>
                         </span>
                       ))}
                     </div>
@@ -396,7 +397,7 @@ export default function PredictorPage() {
                 </div>
               </CardContent>
             )}
-          </Card> */}
+          </Card>
 
           {/* Analyze Button */}
           <Button
@@ -472,7 +473,16 @@ export default function PredictorPage() {
                         </div>
                       </div>
                     </div>
-                    {/* PDF report button removed */}
+                    <Button
+                      variant="outline"
+                      size="sm"
+                      className="border-teal-200 hover:bg-teal-50 hover:text-teal-700 gap-1.5 shrink-0 bg-white"
+                      onClick={handleDownloadPdf}
+                      type="button"
+                    >
+                      <Download className="w-4 h-4 text-teal-600" />
+                      Download PDF
+                    </Button>
                   </div>
                   <p className="text-sm mt-3 text-foreground/80">{prediction.summary}</p>
                 </CardContent>

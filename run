@@ -9,9 +9,9 @@ Terminal 1 — FastAPI Backend:
 powershell
 cd "c:\Users\HP\.gemini\antigravity\scratch\interactome-ai\backend"
 pip install -r requirements.txt    # first time only
-uvicorn app.main:app --reload --port 800
+python -m uvicorn app.main:app --reload --port 8000
 
-erminal 2 — Next.js Frontend:
+Terminal 2 — Next.js Frontend:
 
 powershell
 cd "c:\Users\HP\.gemini\antigravity\scratch\interactome-ai\frontend"
